@@ -7,8 +7,11 @@ export default Ember.Route.extend({
 
   actions: {
     createMessage: function(){
-    var message = this.store.createRecord("message");
-      message.set("body",this.controller.get("newMessage"));
+      var message = this.store.createRecord("message", {
+        body: this.controller.get("newMessage"),
+        timestamp: new Date()
+      });
+
       message.save();
     }
   }
