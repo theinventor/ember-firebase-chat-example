@@ -1,0 +1,14 @@
+{
+  "firebase": "glowing-torch-716",
+  "public": "dist/",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ],
+  "redirects": [ {
+    "source" : "/*",
+    "destination" : "/",
+    "type" : 301
+  } ]
+}
