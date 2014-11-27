@@ -1,0 +1,9 @@
+{{textarea value=newMessage rows=3 class="form-control"}}
+<button {{action "createMessage"}} class="btn btn-success">Send</button>
+
+<ul class="unstyled-list">
+{{#each message in model}}
+  <li>{{message.body}}</li>
+{{/each}}
+</ul>
+{{outlet}}
